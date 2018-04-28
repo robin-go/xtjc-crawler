@@ -82,6 +82,14 @@ def main():
             logger.error(e)
             list_abandon.append(i)
 
+    with open('list_abandon.csv', 'w') as f:
+        csv_write = csv.writer(f)
+        csv_write.writerow(list_abandon)
+
+    with open('detail_abandon.csv', 'w') as f:
+        csv_write = csv.writer(f)
+        csv_write.writerow(detail_abandon)
+
     logger.info('Mission Complete. Congratulations!')
 
 
